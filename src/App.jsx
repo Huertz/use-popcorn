@@ -69,6 +69,7 @@ function Navbar() {
   );
 }
 
+// presentation component
 function Logo() {
   return (
     <div className='logo'>
