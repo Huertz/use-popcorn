@@ -7,5 +7,10 @@ import StarRating from './StarRating.jsx';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <StarRating maxRating={5} />
+    <StarRating
+      size={24}
+      color='red'
+      className='test'
+    />
   </React.StrictMode>
 );
