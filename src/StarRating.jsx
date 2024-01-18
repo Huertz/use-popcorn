@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const containerStyle = {
   display: 'flex',
@@ -12,6 +13,12 @@ const starContainerStyle = {
   gap: '4px',
 };
 
+//!  propTypes
+StarRating.propTypes = {
+  maxRating: PropTypes.number,
+  color: PropTypes.string,
+  sieze: PropTypes.number,
+};
 export default function StarRating({
   maxRating = 5,
   color = '#fcc419',
