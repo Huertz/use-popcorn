@@ -271,7 +271,6 @@ function MovieDetails({ selectedId, onCloseMovie }) {
     Genre: genre,
   } = movie;
 
-  console.log(title, year);
   useEffect(
     function () {
       async function getMoiveDetails() {
@@ -324,7 +323,6 @@ function MovieDetails({ selectedId, onCloseMovie }) {
         <p>Starring {actors}</p>
         <p>Directed by {director}</p>
       </section>
-      {selectedId}
     </div>
   );
 }
