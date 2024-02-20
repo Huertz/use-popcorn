@@ -272,16 +272,19 @@ function MovieDetails({ selectedId, onCloseMovie }) {
   } = movie;
 
   console.log(title, year);
-  useEffect(function () {
-    async function getMoiveDetails() {
-      const res = await fetch(
-        `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
-      );
-      const data = await res.json();
-      setMovie(data);
-    }
-    getMoiveDetails();
-  }, []);
+  useEffect(
+    function () {
+      async function getMoiveDetails() {
+        const res = await fetch(
+          `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
+        );
+        const data = await res.json();
+        setMovie(data);
+      }
+      getMoiveDetails();
+    },
+    [selectedId]
+  );
 
   return (
     <div className='details'>
