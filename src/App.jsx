@@ -77,7 +77,7 @@ export default function App() {
   }
 
   function handleCloseMovie() {
-    selectedId(null);
+    setSelectedId(null);
   }
   useEffect(
     function () {
