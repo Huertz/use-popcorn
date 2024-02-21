@@ -388,7 +388,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     },
     [selectedId]
   );
-
+  // effect for changing title name
   useEffect(
     function () {
       if (!title) return;
