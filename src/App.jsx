@@ -440,14 +440,12 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
                     size={24}
                     onSetRating={setUserRating}
                   />
-                  {userRating > 0 && (
-                    <button
-                      className='btn-add'
-                      onClick={handleAdd}
-                    >
-                      + Add to list
-                    </button>
-                  )}
+                  <button
+                    className='btn-add'
+                    onClick={handleAdd}
+                  >
+                    + Add to list
+                  </button>
                 </>
               ) : (
                 <p>
