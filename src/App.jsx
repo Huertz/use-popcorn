@@ -357,6 +357,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     onCloseMovie();
   }
 
+  // using escape to close movie details
   useEffect(
     function () {
       function callback(e) {
