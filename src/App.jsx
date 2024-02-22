@@ -96,6 +96,7 @@ export default function App() {
     setWatched((watched) => watched.filter((movie) => movie.imdbID !== id));
   }
 
+  // cleaning data fetching
   useEffect(
     function () {
       const controller = new AbortController();
