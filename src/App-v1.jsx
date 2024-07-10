@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
-// Added note
 
 const tempMovieData = [
   {
