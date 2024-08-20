@@ -342,6 +342,8 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     Genre: genre,
   } = movie;
 
+  //
+
   function handleAdd() {
     const newWatchedMovie = {
       imdbID: selectedId,
