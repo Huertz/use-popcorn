@@ -358,6 +358,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
   const [userRating, setUserRating] = useState('');
 
   const countRef = useRef(0);
+  //! does not trigger re-render
   useEffect(
     function () {
       if (userRating) countRef.current++;
