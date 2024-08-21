@@ -62,7 +62,7 @@ export default function App() {
   // const [error, setError] = useState('');
   const [selectedId, setSelectedId] = useState(null);
 
-  const { movies, isLoading, error } = useMovies(query, handleCloseMovie);
+  const { movies, isLoading, error } = useMovies(query);
   //! local storege
   const [watched, setWatched] = useState(function () {
     const storeValue = localStorage.getItem('watched');
