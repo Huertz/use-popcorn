@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { useEffect, useState } from 'react';
 import StarRating from './StarRating';
 import { useMovies } from './useMovies';
+import { useLocalStorageState } from './useLocalStorageState';
 
 const tempMovieData = [
   {
@@ -57,35 +58,28 @@ const KEY = 'f7d5f8df';
 
 export default function App() {
   const [query, setQuery] = useState('');
-  // const [movies, setMovies] = useState([]);
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [error, setError] = useState('');
+
   const [selectedId, setSelectedId] = useState(null);
-
   const { movies, isLoading, error } = useMovies(query);
-  //! local storege
-  const [watched, setWatched] = useState(function () {
-    const storeValue = localStorage.getItem('watched');
-    return JSON.parse(storeValue);
-  });
-  /*
-  useEffect(function () {
-    console.log("After initial render");
-  }, []);
 
-  useEffect(function () {
-    console.log("After every render");
-  });
+  const [watched, setWatched] = useLocalStorageState([], 'watched');
 
-  useEffect(
-    function () {
-      console.log("D");
-    },
-    [query]
-  );
+  // useEffect(function () {
+  //   console.log('After initial render');
+  // }, []);
 
-  console.log("During render");
-*/
+  // useEffect(function () {
+  //   console.log('After every render');
+  // });
+
+  // useEffect(
+  //   function () {
+  //     console.log('D');
+  //   },
+  //   [query]
+  // );
+
+  // console.log('During render');
 
   function handleSelectMovie(id) {
     setSelectedId((selectedId) => (id === selectedId ? null : id));
